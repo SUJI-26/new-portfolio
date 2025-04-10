@@ -205,8 +205,8 @@
         <p><i class="fas fa-envelope"></i> suji26262@gmail.com</p>
         <p><i class="fas fa-phone"></i> +91 8248018762</p>
         <div class="social mt-3">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <i id="githubIcon" class="fab fa-github" style="cursor: pointer;" title="GitHub"></i>
+          <i id="linkedinIcon" class="fab fa-linkedin" style="cursor: pointer;" title="LinkedIn"></i>
         </div>
       </div>
     </div>
@@ -250,6 +250,15 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
+
+document.getElementById("githubIcon").addEventListener("click", function () {
+  window.open("https://github.com/SUJI-26", "_blank");
+});
+
+document.getElementById("linkedinIcon").addEventListener("click", function () {
+  window.open("http://www.linkedin.com/in/vsuji", "_blank");
+});
+
   </script>
   
 </html>
