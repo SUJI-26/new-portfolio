@@ -7,83 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
-  <style>
-    body {
-      background-color: #0f0f0f;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-      scroll-behavior: smooth;
-    }
-    .navbar {
-      background-color: #1a1a1a;
-    }
-    .navbar-brand, .nav-link {
-      color: #00e0ff !important;
-    }
-    .hero {
-      padding: 120px 20px;
-      text-align: center;
-      background: linear-gradient(145deg, #111, #1c1c1c);
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #bbb;
-    }
-    .section {
-      padding: 60px 20px;
-    }
-    h2.section-title {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #00e0ff;
-    }
-    .card {
-      background-color: #1a1a1a;
-      color: #eee;
-      border: none;
-      border-radius: 10px;
-      padding: 20px;
-      transition: 0.3s;
-    }
-    .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 15px #00e0ff44;
-    }
-    .btn-custom {
-      background-color: #00e0ff;
-      color: #000;
-      font-weight: 600;
-      border: none;
-    }
-    footer {
-      background-color: #1a1a1a;
-      text-align: center;
-      padding: 30px;
-      color: #888;
-    }
-    .social a {
-      color: #00e0ff;
-      font-size: 1.5rem;
-      margin: 0 10px;
-    }
-
-    .animate-fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-in-out;
-}
-
-.animate-fade.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -109,6 +33,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <h1>Hi, I'm SUJI V</h1>
+    <img src="suji.jpg" alt="Suji V" class="rounded-circle mb-4 animate-img" style="width: 150px; height: 150px; object-fit: cover; border: 4px solid #00e0ff;" />
     <p id="typewriter" class="mt-3"></p>
     <a href="./Suji.Resume.pdf" class="btn btn-custom mt-3" download>Download Resume</a>
   </section>
@@ -125,30 +50,47 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="section bg-dark">
+  <section id="skills-tools" class="section bg-dark">
     <div class="container">
-      <h2 class="section-title">Skills</h2>
+      <h2 class="section-title">Skills & Tools</h2>
       <div class="row text-center g-4">
-        <div class="col-md-3 col-6">
-          <i class="devicon-html5-plain colored" style="font-size: 50px;"></i>
-          <p>HTML</p>
+        <!-- Skills Section -->
+        <div class="col-md-6">
+          <h3>Skills</h3>
+          <div class="row text-center">
+            <div class="col-md-4 col-6">
+              <i class="devicon-html5-plain colored" style="font-size: 50px;"></i>
+              <p>HTML</p>
+            </div>
+            <div class="col-md-4 col-6">
+              <i class="devicon-css3-plain colored" style="font-size: 50px;"></i>
+              <p>CSS</p>
+            </div>
+            <div class="col-md-4 col-6">
+              <i class="devicon-bootstrap-plain colored" style="font-size: 50px;"></i>
+              <p>Bootstrap</p>
+            </div>
+          </div>
         </div>
-        <div class="col-md-3 col-6">
-          <i class="devicon-css3-plain colored" style="font-size: 50px;"></i>
-          <p>CSS</p>
-        </div>
-        <div class="col-md-3 col-6">
-          <i class="devicon-bootstrap-plain colored" style="font-size: 50px;"></i>
-          <p>Bootstrap</p>
-        </div>
-        <div class="col-md-3 col-6">
-          <i class="devicon-git-plain colored" style="font-size: 50px;"></i>
-          <p>Git</p>
+  
+        <!-- Tools Section -->
+        <div class="col-md-6">
+          <h3>Tools</h3>
+          <div class="row text-center">
+            <div class="col-md-4 col-6">
+              <i class="devicon-git-plain colored" style="font-size: 50px;"></i>
+              <p>Git</p>
+            </div>
+            <div class="col-md-4 col-6">
+              <i class="devicon-figma-plain colored" style="font-size: 50px;"></i>
+              <p>Figma</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
+  
   <!-- Projects Section -->
   <section id="projects" class="section">
     <div class="container">
@@ -214,51 +156,9 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 SUJI V. Made with 💻 and ☕</p>
+    <p>&copy; Design and Developed by SUJI.V 2025 Made with 💻 and ☕</p>
   </footer>
-
+  <script src="./script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-<script>
-     const text = "Aspiring MERN Stack Developer with a passion for web development and real-world problem-solving.";
-    const typewriterElement = document.getElementById("typewriter");
-  
-    let i = 0;
-    function typeWriter() {
-      if (i < text.length) {
-        typewriterElement.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 40); // typing speed
-      }
-    }
-  
-    window.onload = typeWriter;
-
-    const faders = document.querySelectorAll('.animate-fade');
-
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.1
-});
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
-
-document.getElementById("githubIcon").addEventListener("click", function () {
-  window.open("https://github.com/SUJI-26", "_blank");
-});
-
-document.getElementById("linkedinIcon").addEventListener("click", function () {
-  window.open("http://www.linkedin.com/in/vsuji", "_blank");
-});
-
-  </script>
-  
+</body>  
 </html>
